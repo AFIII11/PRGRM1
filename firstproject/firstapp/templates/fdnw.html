@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="../static/css/fdnw.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>fd</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <h4 class="nav" >RESTAURENT</h4>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'fdnw' %}">Add Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'view' %}">View</a>
+            </li>
+            </ul>
+        </div>
+      </nav>
+    <img class="img-fluid" src="../static/images/scooter.png" alt="">
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-lg-5 ">
+          <form method="post" action="{% url 'Adddata' %}">
+            {% csrf_token %}
+              <div class="form-row mt-5">
+                  <div class="form-group col-md-6">
+                      <label>Hotel Name</label>
+                      <input type="text" class="form-control" id="hname" placeholder="Name" name="hotelname">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label>Rating</label>
+                      <select class="custom-select" id="validationDefault04" required name="rating">
+                          <option selected disabled value="">Choose...</option>
+                          <option value="1">*</option>
+                          <option value="2">**</option>
+                          <option value="3">***</option>
+                          <option value="4">****</option>
+                          <option value="5">*****</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <label>Item</label>
+                      <input type="text" class="form-control" id="item" name="item">
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <label>Price</label>
+                          <input type="number" class="form-control" id="price" name="price">
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label>Contact</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Contact No" name="Contact">
+              </div>
+              <div class="form-group">
+                  <label>Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Street.." name="address">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

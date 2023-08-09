@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(101, 89, 89, 0.658) !important;
+}
+h2{
+    color: rgba(4, 1, 1, 0.658);
+}
+
+
+.img-fluid{
+position: absolute;
+left: 100px !important;
+}
